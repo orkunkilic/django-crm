@@ -1,4 +1,11 @@
 {% load static %}
+<style>
+    .hello-msg {
+        font-size: 18px;
+        color: #fff;
+        margin-right: 10px;
+    }
+</style>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <img src="{% static 'images/logo.png' %}">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -11,5 +18,7 @@
                     class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="{% url 'products' %}">Products</a>
         </div>
+        <span class="hello-msg">Hello, {{request.user}}</span>
+        <span class="hello-msg"><a href="{% url 'logout' %}">Logout</a></span>
     </div>
 </nav>
