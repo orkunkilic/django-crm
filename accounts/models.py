@@ -46,4 +46,4 @@ class Order(models.Model):
         Customer, null=True, on_delete=models.SET_NULL)
     product = models.ForeignKey(Product, null=True, on_delete=models.SET_NULL)
     date_created = models.DateTimeField(auto_now_add=True, null=True)
-    category = models.CharField(max_length=256, null=True, choices=STATUS)
+    status = models.CharField(max_length=256, null=True, choices=STATUS)
