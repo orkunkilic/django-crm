@@ -18,6 +18,8 @@
             <a class="nav-item nav-link active" href="{% url 'home' %}">Dashboard<span
                     class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="{% url 'products' %}">Products</a>
+            {% else %}
+            <a class="nav-item nav-link" href="{% url 'account' %}">Settings</a>
             {% endif %}
         </div>
         <span class="hello-msg">Hello, {{request.user}}</span>
